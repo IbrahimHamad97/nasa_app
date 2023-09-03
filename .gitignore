@@ -1,0 +1,15 @@
+# Ignore Node.js build artifacts
+node_modules/
+**/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore IDE and text editor files
+.idea/
+.vscode/
+.DS_Store
+.env
+
+# Ignore build output
+dist/
+build/
