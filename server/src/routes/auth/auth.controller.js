@@ -1,11 +1,3 @@
-const HttpGoogleSignIn = (req, res) => {
-  res.status(200).json({ message: "You are logged" });
-};
-
-const HttpGoogleSignInCallback = (req, res) => {
-  res.status(200).json({ message: "You are logged" });
-};
-
 const HttpSignOut = (req, res) => {
   res.status(200).json({ message: "You are logged" });
 };
@@ -21,9 +13,7 @@ const isLoggedIn = (req, res, next) => {
 };
 
 module.exports = {
-  HttpGoogleSignIn,
   HttpGetSecret,
   isLoggedIn,
-  HttpGoogleSignInCallback,
   HttpSignOut,
 };

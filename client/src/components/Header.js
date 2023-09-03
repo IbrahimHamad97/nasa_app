@@ -27,13 +27,13 @@ const styles = theme => ({
     fontWeight: "bold",
     marginLeft: "10px",
     marginRight: "15px",
-    fontSize: 28,
+    fontSize: 24,
   },
   clickable: {
-    fontSize: 21,
+    fontSize: 18,
     "& i": {
       marginRight: theme.padding / 2,
-      fontSize: 24,
+      fontSize: 21,
     },
   },
   link: {
@@ -95,6 +95,11 @@ const Header = props => {
             <i className="material-icons">history</i>History</Link>
           </Highlight>
         </Clickable>
+        {/* <Clickable className={classes.clickable} onClick={onNav}>
+          <Highlight className={classes.button} animate layer="header">
+            <Link className={classes.link} to="/login">Login</Link>
+          </Highlight>
+        </Clickable> */}
       </nav>
     </Centered>
   </ArwesHeader>

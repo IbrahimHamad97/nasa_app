@@ -93,6 +93,9 @@ const AppLayout = props => {
             <Route exact path="/history">
               <History entered={anim.entered} launches={launches} />
             </Route>
+            <Route exact path="/login">
+              <History entered={anim.entered} launches={launches} />
+            </Route>
           </Switch>
           </div>
         )}

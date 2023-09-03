@@ -25,6 +25,7 @@
     "helmet": "^7.0.0",
     "mongoose": "^7.5.0",
     "morgan": "^1.10.0",
+    "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
     "pm2": "^5.3.0"
   },

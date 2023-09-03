@@ -1,17 +1,32 @@
 const express = require("express");
+const passport = require("passport");
 
 const {
-  HttpGoogleSignIn,
   HttpGetSecret,
   isLoggedIn,
-  HttpGoogleSignInCallback,
   HttpSignOut,
 } = require("./auth.controller");
 
 const authRouters = express.Router();
 
-authRouters.get("/google", HttpGoogleSignIn);
-authRouters.get("/google/callback", HttpGoogleSignInCallback);
+authRouters.get(
+  "/google",
+  passport.authenticate("google", {
+    scope: ["email", "profile"],
+  })
+);
+
+authRouters.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    failureRedirect: "/",
+    successRedirect: "/",
+    session: false,
+  }),
+  (req, res) => {
+    console.log("call back");
+  }
+);
 authRouters.get("/logout", HttpSignOut);
 authRouters.get("/secret", isLoggedIn, HttpGetSecret);
 

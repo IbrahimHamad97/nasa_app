@@ -8,6 +8,6 @@ const api = express.Router();
 
 api.use("/planets", planetRouters);
 api.use("/launches", launchesRouters);
-api.use("/auth", authRouters);
+// api.use("/auth", authRouters);
 
 module.exports = api;
